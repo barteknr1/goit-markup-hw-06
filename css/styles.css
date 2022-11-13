@@ -39,7 +39,6 @@ body {
   font-weight: 700;
   color: var(--blue);
   line-height: 1.17em;
-  letter-spacing: 0.03em;
 }
 .logo-black {
   font-family: "raleway", sans-serif;
@@ -47,7 +46,6 @@ body {
   font-weight: 700;
   color: #000;
   line-height: 1.17em;
-  letter-spacing: 0.03em;
 }
 .logo-white {
   font-family: "raleway", sans-serif;
@@ -55,7 +53,6 @@ body {
   font-weight: 700;
   color: var(--white);
   line-height: 1.17em;
-  letter-spacing: 0.03em;
 }
 .link-margin {
   margin-right: 93px;
@@ -91,7 +88,6 @@ body {
 .menu {
   color: inherit;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.17em;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,7 +102,6 @@ body {
 .link-contact {
   color: var(--lgray);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.17em;
   letter-spacing: 0.02em;
   margin-left: 30px;
@@ -130,16 +125,12 @@ body {
 .link-contact-footer {
   text-decoration: none;
   color: var(--white);
-  font-size: 14px;
   line-height: 1.71em;
-  letter-spacing: 0.03em;
   opacity: 60%;
 }
 .address {
   color: var(--white);
-  font-size: 14px;
   line-height: 1.71em;
-  letter-spacing: 0.03em;
 }
 .link:hover,
 .link:focus {
@@ -172,7 +163,6 @@ body {
   color: inherit;
   font-size: 36px;
   line-height: 1.17em;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -208,16 +198,12 @@ body {
 }
 .lorem-header {
   color: inherit;
-  font-size: 14px;
   line-height: 1.14em;
-  letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
 .lorem-text {
   color: var(--lgray);
-  font-size: 14px;
   line-height: 1.71em;
-  letter-spacing: 0.03em;
 }
 .main-pictures {
   gap: 30px;
@@ -241,7 +227,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18em;
-  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -249,7 +234,6 @@ body {
   color: var(--lgray);
   font-size: 16px;
   line-height: 1.18em;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 .index-team-description {
@@ -270,9 +254,7 @@ body {
 .footer-header {
   text-transform: uppercase;
   color: var(--white);
-  font-size: 14px;
   line-height: 1.14em;
-  letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
 .portfolio-container {
@@ -295,7 +277,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62em;
-  letter-spacing: 0.03em;
   border-style: none;
   border-radius: 4px;
   cursor: pointer;
@@ -322,7 +303,6 @@ body {
   color: var(--lgray);
   font-size: 16px;
   line-height: 1.87em;
-  letter-spacing: 0.03em;
 }
 .portfolio-project-description {
   padding: 20px 24px;
@@ -398,10 +378,8 @@ body {
 }
 .index-jobs-label {
   color: var(--white);
-  font-size: 14px;
   font-weight: 700;
   line-height: 1.14em;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   display: flex;
   position: absolute;
@@ -442,7 +420,6 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.56em;
-  letter-spacing: 0.03em;
 }
 .index-client-link {
   text-decoration: none;
@@ -541,16 +518,35 @@ label > p {
 .modal-input {
   width: 448px;
   height: 40px;
+  color: var(--dgray);
   border: 1px solid rgba(117, 117, 117, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+}
+.modal-input:focus {
+  outline-color: var(--blue);
+  fill: var(--blue);
+}
+.modal-input-wrapper:has(.modal-input:focus) .modal-icon {
+  fill: var(--blue);
 }
 .agreement {
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71px;
-  letter-spacing: 0.03em;
   color: var(--lgray);
+}
+.agreement a {
+  color: var(--blue);
+}
+.modal-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  margin-left: 12px;
 }
 .modal-input.modal-text {
   height: 120px;
@@ -592,7 +588,7 @@ label > p {
   border: 1px solid rgba(117, 117, 117, 0.3);
   border-radius: 4px;
   padding: 16px 15px;
-  background-color: var(--gray);
+  background-color: transparent;
 }
 .newsletter-submit {
   position: relative;
@@ -607,6 +603,7 @@ label > p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   padding: 10px 76px 10px 42px;
+  /* margin-left: 8px; */
 }
 .newsletter-icon {
   position: absolute;
@@ -615,36 +612,3 @@ label > p {
 }
 
 /* NEWSLETTER END */
-
-/* Znaczniki HTML
-
-«B5» Wszystkie dane wejściowe w formularzach mają atrybut name.
-«B6» Wartości atrybutu name są opisowe, dokładnie charakteryzujące,
-po co jest to pole formularza.
-
-«B7» Wszystkie dane wejściowe mają podłączony element <label>.
-«B8» Atrybut placeholder jest ustawiany dla danych wejściowych,
-jeśli ma on w układzie tekst-podpowiedź.
-
-«B9» Przyciski "przesyłania" formularzy mają ustawiony atrybut type="submit".
-«B10» Wszystkie nowe ikony z formularzy zostały dodane do sprite'a SVG icons.svg.
-
-Stylizacja
-«C1» Zakończona jest stylizacja elementów formularza zapisu do
-newslettera w stopce.
-
-«C2» Zakończona jest stylizacja elementów formularza wniosku w
-oknie modalnym.
-
-«C3» Gdy pole formularza otrzyma focus, jego obramowanie i ikona
-zmieniają kolor (jak pokazano w układzie).
-
-«C4» Oryginalne pole wyboru akceptacji regulaminu i polityki w
-formularzu zgłoszeniowym jest ukryte. Czyli nie jest automatycznie zaznaczone.
-
-«C5» Stylizacja „checkboxa” akceptacji umowy licencyjnej została
-wykonana ręcznie, przy użyciu obrazu wektorowego ptaszka z sprite'a SVG.
-
-«C6» Dla wszystkich efektów najechania i focusu (kolor, tło, cień)
-wykonywane są przejścia. Czas - 250ms, funkcja rozkładu czasu
-- cubic-bezier(0.4, 0, 0.2, 1). */
