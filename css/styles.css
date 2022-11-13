@@ -149,7 +149,7 @@ body {
   position: relative;
   color: var(--blue);
 }
-.active-page:after {
+.active-page::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -471,6 +471,9 @@ body {
   list-style: none;
   gap: 30px;
 }
+
+/* MODAL WINDOW START */
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -497,9 +500,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.close-svg {
-  --color2: var(--black);
-}
 .close-button {
   position: absolute;
   width: 30px;
@@ -509,3 +509,142 @@ body {
   border: 1px solid rgba(0 0 0 / 0.1);
   border-radius: 50%;
 }
+.close-svg {
+  --color2: var(--black);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label > p {
+  font-size: 12px;
+  line-height: 1.16em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--lgray);
+  margin-bottom: 4px;
+}
+.modal-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.modal-header {
+  margin: 40px 40px 12px 40px;
+  font-size: 20px;
+  line-height: 1.15em;
+}
+.modal-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(117, 117, 117, 0.2);
+  border-radius: 4px;
+}
+.agreement {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: var(--lgray);
+}
+.modal-input.modal-text {
+  height: 120px;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17em;
+  letter-spacing: 0.01em;
+  color: var(--lgray);
+  resize: none;
+}
+.modal-submit {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 76px;
+  cursor: pointer;
+}
+
+/* MODAL WINDOW END */
+/* NEWSLETTER START */
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  margin-left: 78px;
+}
+.newsletter-input {
+  width: 358px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(117, 117, 117, 0.3);
+  border-radius: 4px;
+  padding: 16px 15px;
+  background-color: var(--gray);
+}
+.newsletter-submit {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 10px 76px 10px 42px;
+}
+.newsletter-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+}
+
+/* NEWSLETTER END */
+
+/* Znaczniki HTML
+
+«B5» Wszystkie dane wejściowe w formularzach mają atrybut name.
+«B6» Wartości atrybutu name są opisowe, dokładnie charakteryzujące,
+po co jest to pole formularza.
+
+«B7» Wszystkie dane wejściowe mają podłączony element <label>.
+«B8» Atrybut placeholder jest ustawiany dla danych wejściowych,
+jeśli ma on w układzie tekst-podpowiedź.
+
+«B9» Przyciski "przesyłania" formularzy mają ustawiony atrybut type="submit".
+«B10» Wszystkie nowe ikony z formularzy zostały dodane do sprite'a SVG icons.svg.
+
+Stylizacja
+«C1» Zakończona jest stylizacja elementów formularza zapisu do
+newslettera w stopce.
+
+«C2» Zakończona jest stylizacja elementów formularza wniosku w
+oknie modalnym.
+
+«C3» Gdy pole formularza otrzyma focus, jego obramowanie i ikona
+zmieniają kolor (jak pokazano w układzie).
+
+«C4» Oryginalne pole wyboru akceptacji regulaminu i polityki w
+formularzu zgłoszeniowym jest ukryte. Czyli nie jest automatycznie zaznaczone.
+
+«C5» Stylizacja „checkboxa” akceptacji umowy licencyjnej została
+wykonana ręcznie, przy użyciu obrazu wektorowego ptaszka z sprite'a SVG.
+
+«C6» Dla wszystkich efektów najechania i focusu (kolor, tło, cień)
+wykonywane są przejścia. Czas - 250ms, funkcja rozkładu czasu
+- cubic-bezier(0.4, 0, 0.2, 1). */
