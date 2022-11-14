@@ -282,7 +282,8 @@ body {
   cursor: pointer;
   margin: 0 4px;
   padding: 6px 22px;
-  transition: color 250ms, background-color 250ms,
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button:hover,
@@ -353,7 +354,8 @@ body {
   --color2: currentColor;
   border-radius: 50%;
   background-color: var(--footer-icon-circle);
-  transition: color 250ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .social-link-icon,
 .social-link:focus .social-link-icon,
@@ -522,22 +524,7 @@ label > p {
   border: 1px solid rgba(117, 117, 117, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-}
-.modal-input:focus {
-  outline-color: var(--blue);
-  fill: var(--blue);
-}
-.modal-input-wrapper:has(.modal-input:focus) .modal-icon {
-  fill: var(--blue);
-}
-.agreement {
-  margin-bottom: 30px;
-  font-weight: 400;
-  line-height: 1.71px;
-  color: var(--lgray);
-}
-.agreement a {
-  color: var(--blue);
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input-wrapper {
   display: flex;
@@ -547,6 +534,7 @@ label > p {
 .modal-icon {
   position: absolute;
   margin-left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input.modal-text {
   height: 120px;
@@ -558,6 +546,41 @@ label > p {
   letter-spacing: 0.01em;
   color: var(--lgray);
   resize: none;
+}
+.modal-input:focus {
+  outline-color: var(--blue);
+}
+.modal-input-wrapper:has(.modal-input:focus) .modal-icon {
+  fill: var(--blue);
+}
+.agreement {
+  margin-bottom: 30px;
+  font-weight: 400;
+  line-height: 1.71em;
+  color: var(--lgray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checkmark {
+  border: 1px solid black;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.agreement [type="checkbox"] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.agreement:has(input:checked) .checkmark {
+  --color1: white;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 2px;
+}
+.agreement a {
+  color: var(--blue);
 }
 .modal-submit {
   font-size: 16px;
