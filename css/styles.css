@@ -553,39 +553,43 @@ label > p {
 .modal-input-wrapper:has(.modal-input:focus) .modal-icon {
   fill: var(--blue);
 }
-.agreement {
+.modal-agreement {
   margin-bottom: 30px;
   font-weight: 400;
   line-height: 1.71em;
   color: var(--lgray);
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
 }
 .checkmark {
   border: 1px solid black;
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.agreement [type="checkbox"] {
+.checkmark-wrapper {
+  display: flex;
+  margin-right: 8px;
+}
+.modal-agreement [type="checkbox"] {
   visibility: hidden;
   width: 0;
   height: 0;
   opacity: 0;
 }
-.agreement:has(input:checked) .checkmark {
+.modal-agreement:has(input:checked) .checkmark {
   --color1: white;
   background-color: #2196f3;
   border: none;
   border-radius: 2px;
 }
-.agreement a {
+.modal-agreement a {
   color: var(--blue);
 }
 .modal-submit {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.88;
+  line-height: 1.88em;
   letter-spacing: 0.06em;
   color: var(--white);
   background-color: var(--blue);
@@ -604,6 +608,9 @@ label > p {
   flex-direction: column;
   margin-left: 78px;
 }
+.newsletter > div {
+  display: flex;
+}
 .newsletter-input {
   width: 358px;
   height: 50px;
@@ -613,11 +620,15 @@ label > p {
   padding: 16px 15px;
   background-color: transparent;
 }
+
 .newsletter-submit {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.88;
+  line-height: 1.88em;
   letter-spacing: 0.06em;
   color: var(--white);
   background-color: var(--blue);
@@ -625,13 +636,10 @@ label > p {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  padding: 10px 76px 10px 42px;
-  /* margin-left: 8px; */
+  padding: 10px 28px 10px 42px;
 }
 .newsletter-icon {
-  position: absolute;
-  top: 13px;
-  right: 28px;
+  margin-left: 24px;
 }
 
 /* NEWSLETTER END */
