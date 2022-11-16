@@ -19,7 +19,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="menu-container">
         <nav class="nav-container">
           <a class="link link-margin" href="./index.html"
@@ -628,7 +628,7 @@
         </div>
         <div class="newsletter">
           <h4 class="footer-header">Zapisz się do newslettera</h4>
-          <div>
+          <form>
             <label>
               <input
                 class="newsletter-input"
@@ -647,21 +647,22 @@
                 ></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal-form">
-          <svg class="close-button">
-            <use
-              class="close-svg"
-              href="./images/icons.svg#icon-close"
-              data-modal-close
-            ></use>
-          </svg>
-          <h3 class="modal-header">Zostaw swoje dane w formularzu poniżej</h3>
+          <button class="close-button" type="button" data-modal-close>
+            <svg class="close-svg">
+              <use
+                class="close-icon"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
           <fieldset class="modal-inputs">
             <label>
               <p>Imie</p>

@@ -33,6 +33,9 @@ body {
   letter-spacing: 0.03em;
   margin: 0 auto;
 }
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .logo-blue {
   font-family: "raleway", sans-serif;
   font-size: 26px;
@@ -79,7 +82,6 @@ body {
   padding-right: 27px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
 }
 .nav-container {
   display: flex;
@@ -342,7 +344,7 @@ body {
   gap: 10px;
 }
 .social-link {
-  color: var(--white);
+  color: var(--social-link-color);
 }
 .social-link:visited {
   color: var(--social-link-color);
@@ -485,16 +487,27 @@ body {
   height: 30px;
   right: 8px;
   top: 8px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-svg {
+  position: absolute;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0 0 0 / 0.1);
   border-radius: 50%;
 }
-.close-svg {
+.close-icon {
   --color2: var(--black);
 }
 .modal-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
 }
 label > p {
   font-size: 12px;
@@ -508,13 +521,15 @@ label > p {
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
   border: none;
   gap: 10px;
   margin-bottom: 20px;
 }
 .modal-header {
-  margin: 40px 40px 12px 40px;
+  margin-bottom: 12px;
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.15em;
 }
 .modal-input {
@@ -533,7 +548,7 @@ label > p {
 }
 .modal-icon {
   position: absolute;
-  margin-left: 12px;
+  left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input.modal-text {
@@ -606,9 +621,9 @@ label > p {
 .newsletter {
   display: flex;
   flex-direction: column;
-  margin-left: 78px;
+  margin-left: auto;
 }
-.newsletter > div {
+.newsletter > form {
   display: flex;
 }
 .newsletter-input {
